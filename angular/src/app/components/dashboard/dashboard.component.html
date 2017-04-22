@@ -1,0 +1,23 @@
+<h2 class="page-header text-center">Dashboard</h2>
+<form (submit)="onAddItemSubmit()">
+  <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-8 col-sm-9">
+          <input type="text" [(ngModel)]="item" name="item" class="form-control" placeholder="Add new item...">
+        </div>
+        <div class="col-md-4 col-sm-3">
+          <button type="submit" class="btn btn-outline-success form-control">Add</button>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li *ngFor="let i of itemList">
+        <div class="row">
+          <div [ngClass]="{'success': i.success}" class="item" (click)="toggleSuccess(i)">{{i.item}}</div>
+          <div class="delete" (click)="onDeleteItem(i._id)">x</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</form>

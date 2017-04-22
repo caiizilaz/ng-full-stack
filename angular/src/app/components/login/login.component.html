@@ -1,0 +1,14 @@
+<h2 class="page-header text-center">Login</h2>
+<form (submit)="onLoginSubmit()">
+  <div class="col-md-6 offset-md-3">
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Username">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Password">
+    </div>
+    <div class="container text-center">
+      <input type="submit" value="Login" class="btn btn-primary">
+    </div>
+  </div>
+</form>

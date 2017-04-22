@@ -1,0 +1,26 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 5px 20px;
+    .delete {
+      margin-left: auto;
+      margin-right: 50px;
+      cursor: pointer;
+      color: #EC644B;
+    }
+    .item {
+      cursor: pointer;
+    }
+    .success {
+      text-decoration: line-through solid #EC644B;
+    }
+  }
+}
+
