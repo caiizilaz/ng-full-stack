@@ -18,6 +18,8 @@ import { TodoService } from './services/todo.service';
 import { ValidateService } from './services/validate.service';
 import { AuthGuard } from './guards/auth.guard';
 
+import { Config } from './class/config';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
@@ -47,7 +49,8 @@ const appRoutes: Routes = [
     ValidateService,
     AuthService,
     TodoService,
-    AuthGuard
+    AuthGuard,
+    Config
   ],
   bootstrap: [AppComponent]
 })
